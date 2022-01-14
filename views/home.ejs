@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Demo</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+    <h1 id="page-heading">
+        <i class="fas fa-address-book"></i>
+        My Contacts List
+    </h1>
+
+    <div id="contact-list">
+        <% for (let c of contact_list) { %>
+        <div class="contact-detail">
+            <span class="contact-name"><%= c.name %> </span>
+            <span class="float-right">
+                <span class="contact-number"><%= c.phone %> </span>
+                <span class="delete-button">
+                    <a href="/delete-contact/?phone=<%= c.phone %> ">
+                        <i class="fas fa-trash-alt fa-xs"></i>
+                    </a>
+                </span>
+            </span>
+        </div>
+        <% } %>
+    </div>
+
+    <div id="contact-form">
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Name.." required>
+            <input type="number" name="phone" placeholder="Phone No.." required>
+            <button type="submit"> Add </button>
+        </form>
+    </div>
+    
+
+    <script type='text/javascript' src="/js/home.js"></script>
+</body>
+</html>

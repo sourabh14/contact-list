@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#page-heading {
+    margin-top: 25px;
+    text-align: center;
+    color: grey;
+}
+
+#contact-list {
+    width: 350px;
+    margin: auto;
+}
+
+.contact-detail {
+    background-color: #646dc7;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    list-style-type: none;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.contact-detail:hover {
+    background-color: grey;
+}
+
+.delete-button a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #c3bfbf;
+}
+
+.delete-button a:visited {
+    text-decoration: none;
+}
+
+.float-right {
+    margin-left: auto;
+    order: 2;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-form form {
+    margin: 15px;
+}
+
+#contact-form input {
+    height: 25px;
+    border-radius: 5px;
+    margin: 3px;
+    border: 1px solid black;
+    text-indent: 8px;
+}
+
+#contact-form button {
+    height: 30px;
+    width: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: grey;
+    color: white;
+    border: none;    
+}
+
+#contact-form button:hover {
+    cursor: pointer;
+}
